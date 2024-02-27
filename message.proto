@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message Packet {
+  enum PacketType {
+    REQUEST = 0;
+    RESPONSE = 1;
+  }
+  PacketType packetType = 1;
+  int32 packetId = 2;
+  bytes data = 3;
+}
